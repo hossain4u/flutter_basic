@@ -8,7 +8,7 @@ class TestPageTwo extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'TEST TWO',
+          'TEST two',
           style: TextStyle(
             color: Colors.white,
             fontSize: 20,
