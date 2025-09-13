@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'alart.dart';
 import 'appbar.dart';
 import 'button.dart';
 import 'gridview_class.dart';
@@ -15,9 +16,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: true,
       title: 'Mintapp',
-      home: StackClass()
+      home: AlertClass()
 
     );
   }

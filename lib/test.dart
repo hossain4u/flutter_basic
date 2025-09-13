@@ -11,7 +11,7 @@ class TestPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'TEST VIEW',
+          'test view',
           style: TextStyle(
             color: Colors.white,
             fontSize: 20,
