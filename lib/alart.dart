@@ -11,6 +11,7 @@ class AlertClass extends StatelessWidget {
         barrierDismissible: false,
         builder: (context) {
           return AlertDialog(
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
             title: Text('Delete File'),
             content: Column(
               mainAxisSize: MainAxisSize.min,
