@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mintapp/test_2.dart';
+import 'package:mintapp/basic/test_2.dart';
 import 'stack.dart';
 
 class TestPage extends StatelessWidget {
