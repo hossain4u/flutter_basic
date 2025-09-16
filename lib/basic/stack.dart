@@ -35,7 +35,7 @@ class StackClass extends StatelessWidget {
                 CircleAvatar(
                   radius: 80,
                   backgroundImage: NetworkImage(
-                    'https://scontent.fdac27-1.fna.fbcdn.net/v/t39.30808-6/510239259_1065527725523268_2331663046724151418_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFngCLbNn-VDDg3JAkyEISu4csRT2DVbe3hyxFPYNVt7XHMpnxql-oQmV7Ul3ekRtRHAwi6HWZB4lYto7kjcoKm&_nc_ohc=opjn0bCpKH8Q7kNvwG6JLdU&_nc_oc=AdmIs47UiCtnouVmXbtprNDV1kiMEwk2SBT_ux6XqYmqaS_zOrr8W4LgAVgmD_X4lhM&_nc_zt=23&_nc_ht=scontent.fdac27-1.fna&_nc_gid=YnfgyFZDZOXVTispeQzLAw&oh=00_AfZCXTlS3QbRrVEK1ST4CxlqrSsGD8_W2iTX00usTlNVSg&oe=68C4C963',
+                    'https://scontent.fdac27-1.fna.fbcdn.net/v/t39.30808-6/510239259_1065527725523268_2331663046724151418_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=2LFJtVjlyC0Q7kNvwEFQbNk&_nc_oc=AdkhNcEOfgkaCdrZSyjFx4U3KqJ0RlsIj5zecJfZzT92VEvylsLKY3jZf_RmlKRXtEA&_nc_zt=23&_nc_ht=scontent.fdac27-1.fna&_nc_gid=Nlaub0HOwLalDQTwTnbHMQ&oh=00_AfaAmmAB_rwocc7JbCOm6DqfU23MHalL0Ina_N1UTZRGmg&oe=68CCB263',
                   ),
                 ),
                 Positioned(

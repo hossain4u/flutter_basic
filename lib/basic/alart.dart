@@ -52,7 +52,6 @@ class AlertClass extends StatelessWidget {
       showDialog(
         context: context,
         builder: (context) => SimpleDialog(
-          backgroundColor: Colors.yellowAccent,
           title: Text('Simple Dialog example'),
           children: [
             SimpleDialogOption(child: Text('Option-1')),
@@ -148,6 +147,9 @@ class AlertClass extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Text('Text theme',
+            style: Theme.of(context).textTheme.bodyLarge,
+            ),
             ElevatedButton(
               onPressed: () {
                 showAlertDialog();

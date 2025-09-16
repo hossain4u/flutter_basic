@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mintapp/theme/themes.dart';
 import '../basic/alart.dart';
 import '../basic/appbar.dart';
+import '../theme/tabbar.dart';
 import '../view/button.dart';
 import '../view/gridview_class.dart';
 import 'home.dart';
@@ -19,8 +20,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: true,
       title: 'Mintapp',
-      home: AppTheme()
-
+      home: TabbarClass(),
     );
   }
 }
