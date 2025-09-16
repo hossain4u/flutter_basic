@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 import '../basic/alart.dart';
+import '../basic/appbar.dart';
 import '../basic/login_page.dart';
 import '../basic/stack.dart';
+import '../view/gridview_class.dart';
 
 class TabbarClass extends StatelessWidget {
   const TabbarClass({super.key});
@@ -24,16 +26,11 @@ class TabbarClass extends StatelessWidget {
             indicatorPadding: EdgeInsets.all(5),
             indicator: BoxDecoration(
               color: Colors.yellow,
-              borderRadius:BorderRadius.circular(5),
+              borderRadius: BorderRadius.circular(5),
             ),
-            labelStyle: TextStyle(
-              fontSize: 15,
-              color: Colors.black
-            ),
+            labelStyle: TextStyle(fontSize: 15, color: Colors.black),
             unselectedLabelColor: Colors.white,
-            unselectedLabelStyle: TextStyle(
-              fontWeight: FontWeight.bold,
-            ),
+            unselectedLabelStyle: TextStyle(fontWeight: FontWeight.bold),
 
             tabs: [
               Tab(
@@ -91,8 +88,49 @@ class TabbarClass extends StatelessWidget {
             // ),
             LoginPage(),
             StackClass(),
-            AlertClass()
+            AlertClass(),
           ],
+        ),
+        drawer: Drawer(
+          child: ListView(
+            children: [
+              DrawerHeader(
+                child: Column(
+                  children: [
+                    CircleAvatar(
+                      radius: 50,
+                      backgroundImage: NetworkImage(
+                        'https://scontent.fdac27-1.fna.fbcdn.net/v/t39.30808-6/510239259_1065527725523268_2331663046724151418_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=2LFJtVjlyC0Q7kNvwEFQbNk&_nc_oc=AdkhNcEOfgkaCdrZSyjFx4U3KqJ0RlsIj5zecJfZzT92VEvylsLKY3jZf_RmlKRXtEA&_nc_zt=23&_nc_ht=scontent.fdac27-1.fna&_nc_gid=Nlaub0HOwLalDQTwTnbHMQ&oh=00_AfaAmmAB_rwocc7JbCOm6DqfU23MHalL0Ina_N1UTZRGmg&oe=68CCB263',
+                      ),
+                    ),
+                    Text(
+                      'Hossain Mahmmud',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              ListTile(
+                visualDensity: VisualDensity(horizontal: 0,vertical: -4),
+                title: Text('Home'),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => GridviewClass()),
+                  );
+                },
+              ),
+              Divider(),
+              ListTile(title: Text('Menu')),
+              Divider(),
+              ListTile(title: Text('Top')),
+              Divider(),
+              ListTile(title: Text('Best')),
+            ],
+          ),
         ),
       ),
     );
