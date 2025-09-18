@@ -20,7 +20,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: true,
       title: 'Mintapp',
-      home: TabbarClass(),
+      home: StackClass(),
+      initialRoute: '/home',
+      routes:{
+    '/home':(context)=>LoginPage(),
+    '/page1':(context)=>MyAppBar(),
+    '/page2':(context)=>ListViewClass()
+    },
     );
   }
 }

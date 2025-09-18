@@ -94,10 +94,11 @@ class StackClass extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (Context) => TestPage(name: 'Hossain',)),
-                );
+                Navigator.pushNamed(context, '/home');
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(builder: (Context) => TestPage(name: 'Hossain',)),
+                // );
               },
               child: Text('Next'),
             ),
