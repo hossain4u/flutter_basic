@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:mintapp/theme/themes.dart';
 import '../basic/alart.dart';
 import '../basic/appbar.dart';
+import '../bottom_nev/bottom_nev.dart';
+import '../idea/for_travle_app.dart';
+import '../idea/portfolio_page.dart';
+import '../idea/quates_app.dart';
 import '../theme/tabbar.dart';
 import '../view/button.dart';
 import '../view/gridview_class.dart';
@@ -20,12 +24,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: true,
       title: 'Mintapp',
-      home: StackClass(),
-      initialRoute: '/home',
+      home: MyAppBar(),
+      initialRoute: '/bottomNev',
       routes:{
     '/home':(context)=>LoginPage(),
     '/page1':(context)=>MyAppBar(),
-    '/page2':(context)=>ListViewClass()
+    '/bottomNev':(context)=>BottomNev()
     },
     );
   }
