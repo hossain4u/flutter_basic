@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../idea/for_travle_app.dart';
 import '../idea/portfolio_page.dart';
-import '../idea/quates_app.dart';
 
 class BottomNev extends StatefulWidget {
   const BottomNev({super.key});
@@ -14,7 +13,6 @@ class BottomNev extends StatefulWidget {
 class _BottomNevState extends State<BottomNev> {
   int _selectedIndex = 0;
   List get page => [
-    QuotesScreen(),
     PortfolioPage(),
     TravelInfoScreen()
   ];

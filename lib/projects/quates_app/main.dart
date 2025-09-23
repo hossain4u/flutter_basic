@@ -13,6 +13,9 @@ class QuotesApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        brightness: Brightness.dark,
+      ),
       title: 'Islamic Quates',
       debugShowCheckedModeBanner: false,
       home: QuatesScreen(),

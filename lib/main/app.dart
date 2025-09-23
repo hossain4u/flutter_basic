@@ -5,7 +5,6 @@ import '../basic/appbar.dart';
 import '../bottom_nev/bottom_nev.dart';
 import '../idea/for_travle_app.dart';
 import '../idea/portfolio_page.dart';
-import '../idea/quates_app.dart';
 import '../theme/tabbar.dart';
 import '../view/button.dart';
 import '../view/gridview_class.dart';
