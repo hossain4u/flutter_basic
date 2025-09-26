@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import 'contract_screen.dart';
 
 void main() {
-  runApp(const ContactApp());
+  runApp(const MyApp());
 }
 
-class ContactApp extends StatelessWidget {
-  const ContactApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {

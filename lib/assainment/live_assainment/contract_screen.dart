@@ -45,7 +45,7 @@ class ContactScreen extends StatelessWidget {
                   backgroundColor: Colors.blueGrey,
                 ),
                 onPressed: () {},
-                child: const Text("Add"),
+                child: const Text("Add",style: TextStyle(color: Colors.black),),
               ),
             ),
             const SizedBox(height: 15),
