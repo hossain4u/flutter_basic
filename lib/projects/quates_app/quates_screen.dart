@@ -313,7 +313,7 @@ class QuatesScreen extends StatelessWidget {
           return Card(
             color: Colors.black,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(12),
             ),
 
             elevation: 5,
