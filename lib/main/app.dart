@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: true,
-      title: 'Mintapp',
+      title: 'Todo App',
       home: MyAppBar(),
       initialRoute: '/bottomNev',
       routes:{

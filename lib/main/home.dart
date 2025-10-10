@@ -7,7 +7,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Mintapp'),
+        title: Text('Todo App'),
         centerTitle: true,
         backgroundColor: Colors.blue,
       ),

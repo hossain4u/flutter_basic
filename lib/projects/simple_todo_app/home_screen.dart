@@ -21,6 +21,49 @@ class _TodoAppState extends State<TodoApp> {
     }
 
   }
+  deleteTask(int index){
+    setState(() {
+      tasks.removeAt(index);
+      Navigator.pop(context);
+    });
+  }
+  editTask(int index){
+    final controller = TextEditingController(text: tasks[index]);
+    showDialog(context: context, builder: (context)=>AlertDialog(
+      title: Text('Edit Task'),
+      content: TextField(
+        controller: controller ,
+      ),
+      actions: [
+        TextButton(onPressed: (){
+          Navigator.pop(context);
+        }, child: Text("Cancle")),
+        ElevatedButton(onPressed: (){
+          final newValue= controller.text;
+          setState(() {
+            if(newValue.isNotEmpty){
+              tasks[index] = controller.text;
+              Navigator.pop(context);
+            }
+          });
+        }, child: Text("Update"))
+      ],
+    ));
+  }
+
+  confromDelete(int index){
+    showDialog(context: context, builder: (context)=>AlertDialog(
+      title: Text("Delete Tasks"),
+      content: Text("Are you sure want to delete the task"),
+      actions: [
+        TextButton(onPressed: (){
+          Navigator.pop(context);
+        }, child: Text("Cancle")),
+
+        ElevatedButton(onPressed: ()=>deleteTask(index), child: Text("Conform"))
+      ],
+    ));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -67,7 +110,9 @@ class _TodoAppState extends State<TodoApp> {
                     ),
                   ),
                 ),
+
                 SizedBox(width: 5),
+
                 ElevatedButton(
                   onPressed: addTasks,
                   child: Text(
@@ -102,11 +147,12 @@ class _TodoAppState extends State<TodoApp> {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         IconButton(
-                          onPressed: () {},
+                          onPressed: ()=> editTask(index),
                           icon: Icon(Icons.edit, color: Colors.green),
                         ),
+
                         IconButton(
-                          onPressed: () {},
+                          onPressed: ()=> confromDelete(index),
                           icon: Icon(Icons.delete, color: Colors.red),
                         ),
                       ],
