@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mintapp/theme/themes.dart';
+import '../api/api_demo.dart';
 import '../basic/alart.dart';
 import '../basic/appbar.dart';
 import '../bottom_nev/bottom_nev.dart';
@@ -8,7 +9,6 @@ import '../idea/portfolio_page.dart';
 import '../theme/tabbar.dart';
 import '../view/button.dart';
 import '../view/gridview_class.dart';
-import 'home.dart';
 import '../basic/login_page.dart';
 import '../basic/asset.dart';
 import '../view/listviewclass.dart';
@@ -21,15 +21,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: true,
+      debugShowCheckedModeBanner: false,
       title: 'Todo App',
-      home: MyAppBar(),
-      initialRoute: '/bottomNev',
-      routes:{
-    '/home':(context)=>LoginPage(),
-    '/page1':(context)=>MyAppBar(),
-    '/bottomNev':(context)=>BottomNev()
-    },
+      home: ApiDemo(),
     );
   }
 }
