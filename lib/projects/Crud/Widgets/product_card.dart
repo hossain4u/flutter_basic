@@ -17,7 +17,10 @@ class product_card extends StatelessWidget {
           children: [
             SizedBox(
               height: 130,
-              child: Image.network(products.img.toString()),
+              child: Image.network(
+                  (products.img != null && products.img.toString().startsWith('http')) ?
+                      products.toString() : 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/1024px-No_image_available.svg.png'
+              ),
             ),
             Text(
               products.productName.toString(),
