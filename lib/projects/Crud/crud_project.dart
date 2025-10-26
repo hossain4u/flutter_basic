@@ -4,7 +4,7 @@ import 'package:mintapp/projects/Crud/product_controller.dart';
 import 'Widgets/product_card.dart';
 
 class CrudProject extends StatefulWidget {
-   const CrudProject({super.key});
+  const CrudProject({super.key});
 
   @override
   State<CrudProject> createState() => _CrudProjectState();
@@ -13,11 +13,14 @@ class CrudProject extends StatefulWidget {
 class _CrudProjectState extends State<CrudProject> {
   ProductController productController = ProductController();
   @override
-  @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    productController.fachProduct();
+    fetchData();
+  }
+  Future fetchData() async {
+    await productController.fachProduct();
+    if (mounted) setState(() {});
   }
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,17 +29,19 @@ class _CrudProjectState extends State<CrudProject> {
         backgroundColor: Colors.red,
         centerTitle: false,
       ),
-      body: GridView.builder(
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          crossAxisSpacing: 10,
-          childAspectRatio: 0.7,
+      body: Expanded(
+        child: GridView.builder(
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            crossAxisSpacing: 10,
+            childAspectRatio: 0.8,
+          ),
+          itemCount: productController.products.length,
+          itemBuilder: (context, index) {
+            var product = productController.products[index];
+            return product_card(products: product,);
+          },
         ),
-        itemCount: productController.products.length,
-        itemBuilder: (context, index) {
-          var product = productController.products[index];
-          return product_card(products: product,);
-        },
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
@@ -45,5 +50,4 @@ class _CrudProjectState extends State<CrudProject> {
     );
   }
 }
-
 

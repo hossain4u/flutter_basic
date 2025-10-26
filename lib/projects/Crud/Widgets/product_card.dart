@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../Model/product_model.dart';
 
 class product_card extends StatelessWidget {
+  //final products;
   final Data products;
   const product_card({
     super.key,
@@ -19,7 +20,7 @@ class product_card extends StatelessWidget {
               height: 130,
               child: Image.network(
                   (products.img != null && products.img.toString().startsWith('http')) ?
-                      products.toString() : 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/1024px-No_image_available.svg.png'
+                  products.toString() : 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/1024px-No_image_available.svg.png'
               ),
             ),
             Text(
